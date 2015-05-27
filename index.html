@@ -5,7 +5,6 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -62,11 +61,11 @@
 <div id="wrapper">
     <!-- Header -->
     <header id="top" class="header panels">
-        <img alt="logo" src="img/bnLogo.png" style="height:125px; padding:10px; position:absolute">
+        <img alt="logo" id="logo" src="img/bnLogo.png" style="height:125px; padding:10px; position:absolute">
     </header>
 
     <div id="topText" class="headerTxt panels">
-        <div class="text-vertical-bottom-right mainText" style="z-index:1000">
+        <div class="text-vertical-bottom-right mainText">
             <h1>Brandon Nelson</h1>
             <h3 id="subText">Develop | Progress | Succeed</h3>
             <br>
@@ -79,9 +78,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Who is Brandon Nelson? </h2>
-                    <p class="lead">A Developer, Leader, Entrepeneur, Enthusiast. Although I love to develop and build amazing things with modern technology. I am not your average developer. Read on to find out more.</p>
-                    <!-- I am a 27 year old from Idaho Falls, Idaho. I am married to the most amazing woman in the world, Katelyn Nelson. -->
+                    <h1>Who is Brandon?</h1>
+                    <p class="lead">A Developer, Leader, Entrepeneur, Enthusiast. Although I love to develop and build amazing things with modern technology. I am not your average developer. I love to work hard, and I love to play even harder. If we work hard to achieve the dreams we have, I believe they can become reality. Read on to discover more about me.</p>
+                    <blockquote>
+                        <p><i class="fa fa-quote-left"> </i> Hard work pays off - hard work beats talent any day, but if you're talented and work hard, it's hard to be beat.  <i class="fa fa-quote-left"></i></p>
+                        <footer id="footerQuote"><cite title="Source Title">Robert Griffin III</cite></footer>
+                    </blockquote>
                 </div>
             </div>
             <!-- /.row -->
@@ -95,11 +97,14 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Technologies</h2>
+                    <h2>Work</h2>
                     <hr class="small">
                     <div class="row">
+                        <h1>Tic Tac Toe</h1> - Like Tic Tac Toe? Click the link and see if you can beat the computer. This is a game I designed and coded for an artificial portion of a class. Feedback on the game is much appreciated. <a href"#contact" >Click Here</a> to send me feedback.
+                    </div>
+                    <div class="row">
                         <div class="col-md-2 col-sm-6">
-                            <div class="service-item">
+                            <div class="service-item" id="css3">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-css3 fa-stack-1x text-primary"></i>
@@ -112,7 +117,7 @@
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
-                            <div class="service-item">
+                            <div class="service-item" id="html5">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-html5 fa-stack-1x text-primary"></i>
@@ -125,7 +130,7 @@
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
-                            <div class="service-item">
+                            <div class="service-item" id="js">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa icon-javascript fa-stack-1x text-primary"></i>
@@ -137,7 +142,7 @@
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
-                            <div class="service-item">
+                            <div class="service-item" id="mysql">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa icon-mysql fa-stack-1x text-primary"></i>
@@ -149,7 +154,7 @@
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
-                            <div class="service-item">
+                            <div class="service-item" id="gitHub">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x text-primary"></i>
@@ -161,7 +166,7 @@
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6">
-                            <div class="service-item">
+                            <div class="service-item" id="php">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa icon-php-alt fa-stack-1x text-primary"></i>
@@ -194,7 +199,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Our Work</h2>
+                    <h2>My Life</h2>
                     <hr class="small">
                     <div class="row">
                         <div class="col-md-6">
@@ -327,6 +332,50 @@
                 }
             }
         });
+    });
+
+    $(window).on('scroll',function() {
+
+        var scroll = $(this).scrollTop();
+        console.log(scroll);
+
+        if (scroll > 100 && scroll < 150) {
+        // apply effects
+            $("#logo").animate({
+                height: "250"
+            }, 3000 );
+        }
+        
+        if (scroll > 575) {
+            $("#css3").animate({
+                opacity: "1"
+            }, 2000, "swing" );
+        }
+        if (scroll > 625) {
+            $("#html5").animate({
+                opacity: "1"
+            }, 2000 );
+        }
+        if (scroll > 675) {
+            $("#js").animate({
+                opacity: "1"
+            }, 2000 );
+        }
+        if (scroll > 725) {
+            $("#mysql").animate({
+                opacity: "1"
+            }, 2000 );
+        }
+        if (scroll > 775) {
+            $("#gitHub").animate({
+                opacity: "1"
+            }, 2000 );
+        }
+        if (scroll > 825) {
+            $("#php").animate({
+                opacity: "1"
+            }, 2000 );
+        }
     });
     </script>
 
