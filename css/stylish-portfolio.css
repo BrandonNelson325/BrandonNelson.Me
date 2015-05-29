@@ -20,6 +20,41 @@ body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+
+a:link {
+    color:white;
+    text-decoration: underline;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.projects {
+    min-height: 100px;
+    font-size: 20px;
+    margin: 20px;
+  }
+
+
+
+
+/* IMAGES  */
+
+
+
+.projectImg {
+    width: 100%%;
+}
+
  #wrapper { 
     position:absolute;
     height:100%;
@@ -48,7 +83,13 @@ body {
     z-index:1000;
 }
 
+/*Sections*/
 #about {
+    background-color: white;
+
+}
+
+#workCont {
     background-color: white;
 
 }
@@ -126,6 +167,12 @@ body {
 
 hr.small {
     max-width: 100px;
+}
+
+hr.black {
+    height: 1px;
+    color: gray;
+    background-color: gray;
 }
 
 /* Side Menu */
@@ -227,15 +274,24 @@ hr.small {
     -o-background-size: cover;
 }
 
-/* Services */
+/* Skills */
 
-.services {
+.skills {
     padding: 50px 0;
 }
 
-.service-item {
+.skills-item {
     margin-bottom: 30px;
     opacity: 0;
+}
+
+/*quote*/
+
+.quote {
+    padding:5%;
+    background-color: white;
+    font-size: 28px;
+    height: 200px;
 }
 
 /* callout */
@@ -295,8 +351,11 @@ hr.small {
 
 /* Footer */
 
-footer {
-    padding: 100px 0;
+#footer p {
+    padding: 15px 0;
+}
+#footer {
+    background-color: white;
 }
 #footerQuote {
     padding: 10px 0;
